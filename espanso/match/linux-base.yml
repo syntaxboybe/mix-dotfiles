@@ -1,0 +1,271 @@
+
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+  
+  # Name
+  - trigger: ":name"
+    replace: "Beboy M. Eyana"
+
+  # Birthdate
+  - trigger: ":birthdate"
+    replace: "07-14-2000"
+
+  # Address
+  - trigger: ":address"
+    replace: "Zone 6 Burnay Gitagum, Misamis Oriental"
+
+  # email
+  - trigger: ":email"
+    replace: "beboy.eyana.m@gmail.com"
+
+  # Github
+  - trigger: ":gh"
+    replace: "https://github.com/syntaxboybe"
+
+  # Facebook
+  - trigger: ":fb"
+    replace: "https://web.facebook.com/syntaxboybe/"
+
+  # Youtube
+  - trigger: ":yt"
+    replace: "https://www.youtube.com/@syntxbyb"
+
+  # Twitter
+  - trigger: ":x"
+    replace: "https://x.com/syntaxboybe"
+
+  # Instagram
+  - trigger: ":insta"
+    replace: "https://www.instagram.com/syntaxboybe/"
+
+  # linkedIn
+  - trigger: ":lin"
+    replace: "https://www.linkedin.com/in/syntaxboybe/"
+
+  # Animepahe
+  - trigger: ":anime"
+    replace: "https://animepahe.si/"
+
+  # # Komorebic-START
+  # - trigger: ":kstart"
+  #   replace: "komorebic start --whkd"
+  #
+  # # Komorebic-STOP
+  # - trigger: ":kstop"
+  #   replace: "komorebic stop --whkd"
+  #
+  # # ShutdownPC
+  # - trigger: ":shut"
+  #   replace: "shutdown /s /t 0"
+  #
+  # # RebootPC
+  # - trigger: ":res"
+  #   replace: "shutdown /r /t 0"
+  #
+  # # sfc/ scannow
+  # - trigger: ":sfc"
+  #   replace: "sfc /scannow"
+
+  # # sudp poweshell = run as admin
+  # - trigger: ":sudo"
+  #   replace: "sudo powershell"
+
+  # # tldr
+  # - trigger: ":ldr"
+  #   replace: "tldr"
+
+  # git (user.name)
+  - trigger: ":gitn"
+    replace: "git config --global user.name"
+
+ # git (user.email)
+  - trigger: ":gite"
+    replace: "git config --global user.email"
+
+# sudo pacman -Syu
+  - trigger: ":update"
+    replace: "sudo pacman -Syu"
+
+# fastfetch
+  - trigger: ":ff"
+    replace: "fastfetch"
+
+# git pull origin
+  - trigger: ":pull"
+    replace: "git pull origin main"
+
+# git stash
+  - trigger: ":gs"
+    replace: "git stash"
+
+# git stash pop
+  - trigger: ":gsp"
+    replace: "git stash pop"
+
+# ralph-tui run
+  - trigger: ":rr"
+    replace: "ralph-tui run"
+
+# ralph-tui config show
+  - trigger: ":rc"
+    replace: "ralph-tui config show"
+
+# ralph-tui create-prd --chat
+  - trigger: ":rpc"
+    replace: "ralph-tui create-prd --chat"
+
+# yazi - file explorer
+  - trigger: ":y"
+    replace: "yazi"
+
+# tmux - terminal multiplexer
+  - trigger: ":t"
+    replace: "tmux"
+
+# ping - connection
+  - trigger: ":!"
+    replace: "ping google.com"
+
+# ping - connection
+  - trigger: ":n"
+    replace: "nvim"
+
+# AI - opencode
+  - trigger: ":o"
+    replace: "opencode"
+
+#  git stash
+  - trigger: ":gt"
+    replace: "git stash"
+
+#  rmpc - CLI MUsic Player
+  - trigger: ":rm"
+    replace: "rmpc"
+
+#  bun run db:push
+  - trigger: ":bdb"
+    replace: "bun run db:push"
+
+#  bun run dev
+  - trigger: ":brd"
+    replace: "bun run dev" 
+
+#  hermes gateway start/chat
+  - trigger: ":hgs"
+    replace: "hermes gateway start"
+
+# reverb start
+  - trigger: ":rev"
+    replace: "php artisan reverb:start"
+
+# pnpm dev
+  - trigger: ":pnpm"
+    replace: "pnpm run dev"
+
+# pnpm dev
+  - trigger: ":serve"
+    replace: "php artisan serve"
+
+#  reset database
+  - trigger: ":reset"
+    replace: "php artisan migrate:fresh --seed"
+
+#  herdr-tui  
+  - trigger: ":h"
+    replace: "herdr"
+
+#  merge main to dev branch
+  - trigger: ":merge"
+    replace: "git merge origin/main"
+
+#  fetch main to dev branch
+  - trigger: ":fetch"
+    replace: "git fetch origin main"
+
+#  migrate table
+  - trigger: ":migrate"
+    replace: "php artisan migrate"
+
+# switch branch
+  - trigger: ":switch"
+    replace: "git switch "
+
+# screencast/fluxcast
+  - trigger: ":fc"
+    replace: "fluxcast"
+
+# watch-youtube-terminal
+  - trigger: ":wyt"
+    replace: "mov-cli"
+
+# download-youtube-terminal
+  - trigger: ":dyt"
+    replace: "yt-dlp"
+
+# jsy-trading - vps
+  - trigger: ":jsy"
+    replace: "ssh root@194.233.93.186"
+
+# jsy-trading - password
+  - trigger: ":pw"
+    replace: "o34Ivt64X7nCD3J0mkagUkROTU9"
+
+# jsy-trading - dir
+  - trigger: ":dir"
+    replace: "cd /var/www/jsytrading.ph && ls"
+
+# Battery-Threshold
+  - trigger: ":bt"
+    replace: "bat /sys/class/power_supply/BAT1/charge_control_end_threshold"
+
+# anime-cli
+  - trigger: ":anime"
+    replace: "ani-cli"
+
+# asciinema - terminal recorder
+  - trigger: ":rec"
+    replace: "asciinema rec filename.cast"
+
+# agg-asciinema - converter GIF
+  - trigger: ":gif"
+    replace: "agg filename.cast filename.gif"
+
+
